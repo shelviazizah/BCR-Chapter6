@@ -13,6 +13,7 @@ import WhyUs from './component/whyUs';
 import BeforeFaq from './component/beforeFaq';
 import FAQSection from './component/faq';
 import Testimonial from './component/testimonial';
+import CarSearchForm from './component/searchCar';
 import Footer from './component/footer';
 import reportWebVitals from './reportWebVitals';
 
@@ -54,6 +55,7 @@ searchCar.render(
         <React.StrictMode>
         <Navbar />
         <LandingPage />
+        <CarSearchForm />
         <Footer />
         </React.StrictMode>}/>
     </Routes>
