@@ -1,6 +1,6 @@
 import React from "react";
 import '../assets/css/style.css';
-import imgSosmed from '../assets/img/img_sosmed.png';
+import imgSosmed from '../assets/images/img_sosmed.png';
 
 function Footer() {
     return (

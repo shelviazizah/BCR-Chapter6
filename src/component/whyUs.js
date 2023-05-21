@@ -1,9 +1,9 @@
 import React from "react";
 import '../assets/css/style.css';
-import whyUs1 from '../assets/img/img_whyus_1.png';
-import whyUs2 from '../assets/img/img_whyus_2.png';
-import whyUs3 from '../assets/img/img_whyus_3.png';
-import whyUs4 from '../assets/img/img_whyus_4.png';
+import whyUs1 from '../assets/images/img_whyus_1.png';
+import whyUs2 from '../assets/images/img_whyus_2.png';
+import whyUs3 from '../assets/images/img_whyus_3.png';
+import whyUs4 from '../assets/images/img_whyus_4.png';
 
 function WhyUs() {
     return (

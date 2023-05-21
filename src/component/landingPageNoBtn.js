@@ -1,9 +1,8 @@
 import React from "react";
-import { Link } from 'react-router-dom';
 import '../assets/css/style.css';
 import imgCar from '../assets/images/img_car.png';
 
-const LandingPage = () => {
+const LandingPageNoBtn = () => {
     return (
         <section id="landing" className="container-global bg-grey">
             <div className="row">
@@ -11,7 +10,6 @@ const LandingPage = () => {
                     <h2>Sewa & Rental Mobil Terbaik di kawasan (Lokasimu)</h2>
                     <p>Selamat Datang di Binar Car Rental. Kami menyediakan mobil kualitas terbaik dengan harga terjangkau. Selalu
                         siap melayani kebutuhanmu untuk sewa mobil selama 24 jam.</p>
-                    <Link to="/searchcar"><button className="btn btn-success">Mulai Sewa Mobil</button></Link>
                 </div>
                 <div className="col-sm-6">
                     <img src={imgCar} alt="Car" id="img-car" />
@@ -21,4 +19,4 @@ const LandingPage = () => {
     );
 };
 
-export default LandingPage;
+export default LandingPageNoBtn;

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import '../assets/css/style.css';
-import imgMenu from '../assets/img/menu.svg';
+import imgMenu from '../assets/images/menu.svg';
 
 function Navbar() {
     const [showMenu, setShowMenu] = useState(false);

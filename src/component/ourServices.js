@@ -1,7 +1,7 @@
 import React from "react";
 import '../assets/css/style.css';
-import womanImage from '../assets/img/img_woman.png';
-import checklistImage from '../assets/img/img_checklist.png';
+import womanImage from '../assets/images/img_woman.png';
+import checklistImage from '../assets/images/img_checklist.png';
 
 function OurServices() {
     return (

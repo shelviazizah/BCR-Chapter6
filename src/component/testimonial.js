@@ -3,9 +3,9 @@ import OwlCarousel from "react-owl-carousel";
 import '../assets/css/style.css';
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
-import testi1 from "../assets/img/img_testimoni_1.png";
-import testi2 from "../assets/img/img_testimoni_2.png";
-import rating from "../assets/img/img_star.png";
+import testi1 from "../assets/images/img_testimoni_1.png";
+import testi2 from "../assets/images/img_testimoni_2.png";
+import rating from "../assets/images/img_star.png";
 
 const responsiveSettings = {
     0: {
