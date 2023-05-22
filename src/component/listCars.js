@@ -1,8 +1,8 @@
 import '../assets/css/style.css';
 import React, { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch, useSelector } from 'react-redux';
 import { updateFilteredCars } from '../features/cars/carsSlice';
-import image1 from '../assets/images/car01.min.jpg'
+import image1 from '../assets/images/car01.min.jpg';
 
 
 const ListCars = () => {
@@ -17,16 +17,16 @@ const ListCars = () => {
   const formatDate = (dateStr) => {
     const newDateTime = new Date(dateStr);
     const epochTime = newDateTime.getTime();
-    return epochTime
-  }
+    return epochTime;
+  };
 
   const handleFindCar = ()=>{
-    const newDateTime = new Date(`${selectedDate} ${selectedTime}`)
+    const newDateTime = new Date(`${selectedDate} ${selectedTime}`);
     const epochTime = newDateTime.getTime();
     
-    const filterResult = cars.filter((i) => i.capacity >= capacity && formatDate(i.availableAt) >= epochTime )
-    dispatch(updateFilteredCars(filterResult))
-  }
+    const filterResult = cars.filter((i) => i.capacity >= capacity && formatDate(i.availableAt) >= epochTime );
+    dispatch(updateFilteredCars(filterResult));
+  };
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -37,19 +37,17 @@ const ListCars = () => {
   const getDataCars = async () => {
     const response = await fetch(Url);
     const dataCar = await response.json();
-    setCars(dataCar)
-  }
+    setCars(dataCar);
+  };
   
   useEffect (() => {
     getDataCars();
 
-    fetch(Url)
-    .then(response => response.json())
-    .then(data => { setCars(data); dispatch(updateFilteredCars(data))})
-  }, [dispatch]) 
+    fetch(Url).then(response => response.json()).then(data => { setCars(data); dispatch(updateFilteredCars(data));});
+  }, [dispatch]);
 
   return (
-  <div>
+    <div>
       <div className="card w-75 container-fluid">
         <form onSubmit={handleSubmit}>
           <div className="d-flex justify-content-lg-evenly">
@@ -163,9 +161,9 @@ const ListCars = () => {
 
 
       <div className='container-global'>
-      <div id="cars-container">
+        <div id="cars-container">
           {filteredCars.map((car) => 
-              <div key={car.id} className="col-lg-4 col-md-4 col-sm-12 mx-0">
+            <div key={car.id} className="col-lg-4 col-md-4 col-sm-12 mx-0">
               <div className="card mx-2 my-2 g-0" style={{ width: '18.4rem', boxShadow: '0px 0px 4px rgba(0, 0, 0, 0.15)' }}>
                 <img src={image1} className="card-img-top img-fluid" alt={car.manufacture} style={{ height: '195px', borderRadius: '3px', objectFit: 'cover' }} />
                 <div className="card-body" style={{ fontSize: '14px' }}>
@@ -180,9 +178,9 @@ const ListCars = () => {
               </div>
             </div>
           )};
+        </div>
       </div>
-  </div>
-  </div>
+    </div>
   );
 };
 
