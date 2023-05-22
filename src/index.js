@@ -14,15 +14,17 @@ import WhyUs from './component/whyUs';
 import BeforeFaq from './component/beforeFaq';
 import FAQSection from './component/faq';
 import Testimonial from './component/testimonial';
-import CarSearchForm from './component/searchCar';
 import ListCars from './component/listCars';
 import Footer from './component/footer';
 import reportWebVitals from './reportWebVitals';
+import { store } from './app/store';
+import { Provider } from 'react-redux';
 
 
 
 const cars = ReactDOM.createRoot(document.getElementById('cars'));
 cars.render(
+  <Provider store={store}>
   <BrowserRouter>
     <Routes>
       <Route path="/" element={
@@ -36,24 +38,16 @@ cars.render(
         <FAQSection />
         <Footer />
         </React.StrictMode>}/>
-    </Routes>
-  </BrowserRouter>
-);
-
-const searchCar = ReactDOM.createRoot(document.getElementById('searchCar'));
-searchCar.render(
-  <BrowserRouter>
-    <Routes>
       <Route path="searchcar" element={
         <React.StrictMode>
         <Navbar />
         <LandingPageNoBtn />
-        <CarSearchForm />
         <ListCars />
         <Footer />
         </React.StrictMode>}/>
     </Routes>
   </BrowserRouter>
+  </Provider>
 );
 
 reportWebVitals();
